@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CustomIdentityWebApi.Models;
 using CustomIdentityWebApi.Res.RoleRes;
+using CustomIdentityWebApi.Res.UserRes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,11 @@ namespace CustomIdentityWebApi.Mapping
         public MappingProfile()
         {
             CreateMap<SaveRoleRes, Role>();
+            CreateMap<CreateUserRes, User>();
+            CreateMap<UpdateUserRes, User>();
 
             CreateMap<Role, SelectRoleRes>();
+            CreateMap<User, SelectUserRes>();
         }
     }
 }

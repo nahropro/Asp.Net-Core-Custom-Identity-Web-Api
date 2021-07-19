@@ -61,5 +61,10 @@ namespace CustomIdentityWebApi.Repos
 
             return role;
         }
+
+        public async Task<Role> GetRoleByNameAsync(string roleName)
+        {
+            return await context.Roles.SingleOrDefaultAsync(r => r.Name == roleName);
+        }
     }
 }

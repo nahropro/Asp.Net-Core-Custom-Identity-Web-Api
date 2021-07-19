@@ -12,5 +12,6 @@ namespace CustomIdentityWebApi.Repos
         Task<List<SelectRoleRes>> GetRolesAsync();
         Task<Role> UpdateRoleAsync(long id, SaveRoleRes res);
         Role RemoveRole(Role role);
+        Task<Role> GetRoleByNameAsync(string roleName);
     }
 }
